@@ -1,0 +1,46 @@
+.cabecalho h2{
+  font-size: 20px;
+  float: right;
+  margin-right: 37%;
+  text-align: center;
+  margin-top: -7%;
+}
+.cabecalho h3{
+  font-size: 18px;
+  float: right;
+  margin-right: 40%;
+  text-align: center;
+  margin-top: 2%;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.cabecalho img{
+    width: 87px;
+    height: 95px;
+    float: right;
+    margin-right: 63%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.cabecalho p{
+  float: right;
+  margin-right: 37%;
+  text-align: center;
+  margin-top: -3%;
+}
+.destino{
+  float: right;
+  margin-right: -18%;
+  border: none;
+  margin-top: 5%;
+  width: -25px;
+  text-align: justify;
+}
+.destino2{
+  float: right;
+  margin-right: -5%;
+  border: none;
+  margin-top: 5%;
+  width: -25px;
+  text-align: justify;
+}
