@@ -28,12 +28,51 @@
     <form class="destino" method="post">
 	   <input type="checkbox" id="check<?=$id_cliente?>" name="check<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('check','<?=$id_cliente?>','checkna');"> Mudança
     </form>
-    <form class="destino2" action="index.html" method="post">
+    <form class="destino2" action="#" method="post">
       <input type="checkbox" id="checkna<?=$id_cliente?>" name="checkna<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('checkna','<?=$id_cliente?>','check');" > Visita
     </form>
 	   <br><br>
-  <form class="" action="index.html" method="post">
-
+  <form class="bdy" action="#" method="post">
+    <p class="part1">Recomendamos a Igreja Evangélica Assembleia de Deus em <input type="placeholder"/> </br></br>
+     irmão(a) <input class="input2" type="placeholder"/>
+    </p>
   </form>
+  <form class="membro" method="post">
+   <input type="checkbox" id="check<?=$id_cliente?>" name="check<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('check','<?=$id_cliente?>','checkna');"> <p class="text1_mbm">Membro desta Igreja</p>
+  </form>
+  <form class="congregado" action="#" method="post">
+    <input type="checkbox" id="checkna<?=$id_cliente?>" name="checkna<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('checkna','<?=$id_cliente?>','check');" > <p class="text2_mbm">Congregado(a) nesta Igreja</p>
+  </form>
+  <form class="cargo" action="index.html" method="post">
+    <p class="text3_cargo">Cargo </p> <input type="placeholder" name="cargo" >
+  </form>
+  <form class="estado_civil" action="index.html" method="post">
+    <p class="text4_estado">Estado Civil</p> <input type="placeholder" name="estado civil" >
+  </form>
+  <form class="setor" action="index.html" method="post">
+    <p class="text5_setor">Setor</p> <input type="placeholder" name="setor" >
+  </form>
+  <form class="congregacao" action="index.html" method="post">
+    <p class="text6_congreg">Congregação</p> <input type="placeholder" name="congregacao">
+  </form>
+  <form class="compl" action="index.html" method="post">
+    <p>Certo de vosso amor cristão, pedimos que o (a) recebais fraternalmente no Senhor Jesus. </br> No ensejo externamos nosso sincero apreço por essa amada igreja.</p>
+  </form>
+  <form id="observation">
+    <p>Oberservação: </p>
+      <textarea class="input3"></textarea>
+  </form>
+
+  <div class="data">
+    <input type="date"/>
+  </div>
   </body>
+  <footer class="rodape">
+    <div class="assinatura">
+      <label>__________________________________________</label>
+    </div>
+    <div class="ass_pastor">
+      <p>Assinatura</p>
+    </div>
+  </footer>
 </html>
