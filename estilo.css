@@ -44,3 +44,115 @@
   width: -25px;
   text-align: justify;
 }
+.part1{
+  margin-top: 20%;
+  margin-left: 30%;
+}
+.place1 input {
+  margin-left: 59%;
+  margin-top: auto;
+  margin-bottom: 10%;
+}
+.part2 {
+  margin-top: 1%;
+  margin-left: 30%;
+}
+.input2{
+  width: 498px;
+}
+.membro input{
+  float: right;
+  margin-right: 68%;
+}
+.text1_mbm{
+  float: right;
+  margin-right: 58%;
+  margin-top: -18px;
+}
+.congregado input{
+  float: right;
+  margin-right: 42%;
+  margin-top: -31px;
+}
+.text2_mbm{
+  float: right;
+  margin-right: 29%;
+  margin-top: -33px;
+}
+.text3_cargo {
+  float: right;
+  margin-right: 890px;
+}
+.cargo input{
+  float: right;
+  margin-right: 53%;
+  margin-top: -34px;
+}
+.text5_setor {
+  float: right;
+  margin-right: 890px;
+}
+.setor input{
+  float: right;
+  margin-right: 53%;
+  margin-top: -34px;
+}
+.text4_estado{
+  float: right;
+  margin-right: 550px;
+  margin-top: -38px;
+}
+.estado_civil input{
+  float: right;
+  margin-right: 370px;
+  margin-top: -38px;
+}
+.text6_congreg{
+  float: right;
+  margin-right: 550px;
+  margin-top: -38px;
+}
+.congregacao input{
+  float: right;
+  margin-right: 370px;
+  margin-top: -38px;
+}
+.compl {
+  float: right;
+  margin-right: 370px;
+}
+#observation{
+  float: right;
+  margin-right: 757px;
+}
+.input3{
+  float: right;
+  margin-right: -384px;
+  width: 550px;
+  height: 100px;
+}
+.data input{
+  margin-top: 200px;
+  margin-right: 100px;
+}
+
+.assinatura{
+  float: right;
+  margin-top: 310px;
+  margin-right: -450px;
+}
+.data{
+
+    float: right;
+    margin-top: 10px;
+    margin-right: -475px;
+}
+.assinatura p{
+  margin-top: 400px;
+  float: right;
+}
+.ass_pastor{
+  float: right;
+  margin-top: 330px;
+  margin-right: -330px;
+}
