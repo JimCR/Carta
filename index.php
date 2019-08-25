@@ -1,78 +1,153 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Carta de Recomendação</title>
-    <link rel="stylesheet" href="_bootstrap/bootstrap.css"/>
-    <link rel="stylesheet" href="_css/estilo.css">
-    <link rel="icon" type="imagem/png" href="_img/logo1.png" />
-    <link type="text/javascript" src="_js/bootstrap.js" />
-  </head>
-  <script type="text/javascript">
-  function marcardesmarcar(check,id,check2){
-  d = document.form;
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<title>Carta de Recomendação</title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="_css/bootstrap.min.css">
+	<link rel = "shortcut icon" type = "imagem/x-icon" href = "_img/logo1.png"/>
+</head>
+<body>
+	<header class="cabecalho">
+		<h3>Igreja Evangélica Assembléia de Deus</br> Ministério do Belém</h3>
+		<p></br>Rua Cuiaba nº 1390 - Dourados/MS - 79802-030</br>Fone: (67) 3421-0392 / 3421-0256 Caixa Postal 58</br></p>
+		</br><h4>CARTA DE APRESENTAÇÃO</h4>
+	</header>
+	<form>
+		<div class="destino">
+		<br><input type="radio" name=CHG_CHK value="VISIT" 
+					<?php if ($_POST["CHG_CHK"] == "VISIT") {
+						# code...
+						echo "checked";
+					}?>>Visita
+					   	  <input type="radio" name=CHG_CHK value="CHG"
+					 <?php if ($_POST["CHG_CHK"] == "CHG") {
+					   	  	# code...
+					   	  	echo "checked";
+					 }?>>Mudança
+		</div>
+		<div class="cidade">
+			<p>Recomendamos a Igreja Evangélica Assembléia de Deus em</p> <input type="text" name="igreja" placeholder="Cidade de Destino!">
+		</div>
+		<div class="bro">
+			<p>o irmão(a)</p> <input type="text" name="membro" placeholder="Nome do Membro!">
+		</div>
+		<div class="mbm">
+		<br><input type="radio" name=CNG_CHK value="MEB" 
+					<?php if ($_POST["CNG_CHK"] == "MEB") {
+						# code...
+						echo "checked";
+					}?>>Membro desta igreja
+		</div>
+		<div class="mbm2">
+				<input type="radio" name=CNG_CHK value="CNG"
+				 <?php if ($_POST["CNG_CHK"] == "CNG") {
+				   	  	# code...
+				   	  	echo "checked";
+				 }?>>Congragado(a) nesta igreja
+		</div>
+		<div class="cargo">
+			<br>Cargo:		<select name="cargo">
+							<option selected="">Selecione</option>
+							<option>Pastor</option>
+							<option>Evangelista</option>
+							<option>Presibitero</option>
+							<option>Diacono</option>
+							<option>Cooperador</option>
+							<option>Membro</option>
+		</select>
+		</div>
+		<div class="estadocivil">
 
-  if (document.getElementById(check+id).checked==true){
-      document.getElementById(check2+id).checked=false;
-  }
+			</br>Estado Civil:	<select name="estadocivil">
+								<option selected="">Selecione</option>
+								<option>Casado</option>
+								<option>Solteiro</option>
+								</select>
+		</div>
+		<div class="setor">
+			</br> Setor: <select name="setor">
+						<option selected="">Selecione
+							<?php
+				 	for ($i=1; $i<=31; $i++)
+				      {?>
+				     <option value="<?php echo $i;?>"> <?php echo $i;}
+				?>
+				<?php if($_POST["SET"] == "Setor")
+					{echo "Setor";} ?>
+						</option>
+						</select>
+		</div>
+		<div class="congregacao">
+			<br> Congregação: <select>
+							  <option>Selecione</option>
+							  <option>Sede</option>
+							  </select>
+		</div>
+		<div class="saudation">
+			<p>Certo de vosso amor cristão, pedimos que o(a) recebais fraternalmente </br>no Senhor Jesus. No ensejo externamos nosso sincero apreço por essa </br>amada igreja.</p>
+		</div>
+		<div class="observacao">Observação:
+			<textarea class="form-control" name="observacao"></textarea>
+		</div>
+		<div class="data">
+			</br>Dourados,MS - <select selected>Dia
+				<option selected="Dia">Dia
+				<?php
+				 	for ($i=1; $i<=31; $i++)
+				      {?>
+				     <option value="<?php echo $i;?>"> <?php echo $i;}
+				?>
+				<?php if($_POST["DAY"] == "Dia")
+					{echo "Dia";} ?>
+			</option>
+			</select>
+			de <select selected="">Mês
+				<option selected="">Mês</option>
+				<option>Janeiro</option>
+				<option>Fevereiro</option>
+				<option>Março</option>
+				<option>Abril</option>
+				<option>Maio</option>
+				<option>Junho</option>
+				<option>Julho</option>
+				<option>Agosto</option>
+				<option>Setembro</option>
+				<option>Outubro</option>
+				<option>Novembro</option>
+				<option>Dezembro</option>
+			   </select>
+			de <select selected="">Ano
+				<option selected="">Ano
+					<?php
+			      for ($i=1950; $i<=2019; $i++){?>
+				    <option value="<?php echo $i;?>">
+				     <?php echo $i;}?>
 
-}
-  </script>
-  <body>
-    <header class="cabecalho">
-        <img src="_img/logo1.png" alt="Belém">
-        <h2>Igreja Evangélica Assembléia de Deus<br/> Ministério do Belém</h2>
-        <p>Rua: Cuiabá nº 1390 - Dourados/MS - 79802-030 <br/> Fones: (67)3421-0392 / 3421-0256 Caixa Postal 58</p>
-        <h3>Carta de Apresentação</h3>
-    </header>
-    <form class="destino" method="post">
-	   <input type="checkbox" id="check<?=$id_cliente?>" name="check<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('check','<?=$id_cliente?>','checkna');"> Mudança
-    </form>
-    <form class="destino2" action="#" method="post">
-      <input type="checkbox" id="checkna<?=$id_cliente?>" name="checkna<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('checkna','<?=$id_cliente?>','check');" > Visita
-    </form>
-	   <br><br>
-  <form class="bdy" action="#" method="post">
-    <p class="part1">Recomendamos a Igreja Evangélica Assembleia de Deus em <input type="placeholder"/> </br></br>
-     irmão(a) <input class="input2" type="placeholder"/>
-    </p>
-  </form>
-  <form class="membro" method="post">
-   <input type="checkbox" id="check<?=$id_cliente?>" name="check<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('check','<?=$id_cliente?>','checkna');"> <p class="text1_mbm">Membro desta Igreja</p>
-  </form>
-  <form class="congregado" action="#" method="post">
-    <input type="checkbox" id="checkna<?=$id_cliente?>" name="checkna<?=$id_cliente?>" style="width:30px"  onclick="marcardesmarcar('checkna','<?=$id_cliente?>','check');" > <p class="text2_mbm">Congregado(a) nesta Igreja</p>
-  </form>
-  <form class="cargo" action="index.html" method="post">
-    <p class="text3_cargo">Cargo </p> <input type="placeholder" name="cargo" >
-  </form>
-  <form class="estado_civil" action="index.html" method="post">
-    <p class="text4_estado">Estado Civil</p> <input type="placeholder" name="estado civil" >
-  </form>
-  <form class="setor" action="index.html" method="post">
-    <p class="text5_setor">Setor</p> <input type="placeholder" name="setor" >
-  </form>
-  <form class="congregacao" action="index.html" method="post">
-    <p class="text6_congreg">Congregação</p> <input type="placeholder" name="congregacao">
-  </form>
-  <form class="compl" action="index.html" method="post">
-    <p>Certo de vosso amor cristão, pedimos que o (a) recebais fraternalmente no Senhor Jesus. </br> No ensejo externamos nosso sincero apreço por essa amada igreja.</p>
-  </form>
-  <form id="observation">
-    <p>Oberservação: </p>
-      <textarea class="input3"></textarea>
-  </form>
-
-  <div class="data">
-    <input type="date"/>
-  </div>
-  </body>
-  <footer class="rodape">
-    <div class="assinatura">
-      <label>__________________________________________</label>
-    </div>
-    <div class="ass_pastor">
-      <p>Assinatura</p>
-    </div>
-  </footer>
+				     <?php 
+				     	if ($_POST["YEAR"] == "Ano") {
+				     		# code...
+				     		echo "selected";
+				     	}
+				     ?>
+				</option>
+			</select>
+		</div>
+	</form>
+	<div class="line">
+		________________________________________
+					 <p>Assinatura</p>
+	</div>
+	<div class="botao" name="btn">
+		</br><input type="reset" name="limpar">
+	</div>
+	<div class="sbm">
+		<input type="submit" value="Imprimir" name="Imprimir">
+	</div>
+</body>
 </html>
